@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+    }
+
+    input[type="number"], input[type="text"] {
+        padding: 10px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="number"]:focus, input[type="text"]:focus {
+        outline: none;
+        box-shadow: 0 0 10px rgba(0, 128, 0, 0.5);
+    }
+
+    h1 {
+        color: #008000;
+        text-align: center;
+        animation: fadeIn 2s;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    input[type="number"], input[type="text"] {
+        color: #008000;
+        animation: slideIn 1s;
+        padding: 5px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateX(-100px);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    #hasil {
+        font-size: 24px;
+        font-weight: bold;
+        color: #008000;
+        animation: bounce 1s;
+        padding: 5px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+</style>
+</head>
+<body>
+    <h1>hitung dua bilangan</h1>
+    <input type="number" name="bil1" id="bil1" 
+    placeholder="masukkan bilangan1" 
+    onchange="hitungbilangan()" value="0">
+    +
+    <input type="number" name="bil2" id="bil2" 
+    placeholder="masukkan bilangan2" 
+    onchange="hitungbilangan()" value="0">
+    =
+    <input type="text" id="hasil" readonly>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

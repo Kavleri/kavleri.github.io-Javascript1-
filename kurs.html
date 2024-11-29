@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs dollar</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        transition: color 0.5s ease-in-out;
+        color: #34C759;
+        animation: warna-berubah 2s infinite;
+    }
+
+    @keyframes warna-berubah {
+        0% {
+            color: #34C759;
+        }
+        50% {
+            color: #8BC34A;
+        }
+        100% {
+            color: #34C759;
+        }
+    }
+
+    input[type="number"] {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 128, 0, 0.1);
+        transition: box-shadow 0.5s ease-in-out;
+        animation: bayangan-berubah 2s infinite;
+    }
+
+    @keyframes bayangan-berubah {
+        0% {
+            box-shadow: 0 0 10px rgba(0, 128, 0, 0.1);
+        }
+        50% {
+            box-shadow: 0 0 10px rgba(0, 128, 0, 0.5);
+        }
+        100% {
+            box-shadow: 0 0 10px rgba(0, 128, 0, 0.1);
+        }
+    }
+
+    input[type="number"]:focus {
+        box-shadow: 0 0 10px rgba(0, 128, 0, 0.5);
+        transition: box-shadow 0.5s ease-in-out;
+        animation: bayangan-berubah 2s infinite;
+    }
+
+    h3 {
+        color: #34C759;
+        text-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
+        animation: judul-berubah 2s infinite;
+    }
+
+    @keyframes judul-berubah {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: bold;
+        color: #34C759;
+        text-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
+        animation: teks-berubah 2s infinite;
+    }
+
+    @keyframes teks-berubah {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.8;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    span {
+        font-size: 24px;
+        font-weight: bold;
+        color: #34C759;
+        text-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
+        animation: angka-berubah 2s infinite;
+    }
+
+    @keyframes angka-berubah {
+        0% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(5deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+</style>
+</head>
+<body>
+    <h3>Menghitung Kurs dollar</h3>
+    <input type="number" id="rupiah" placeholder="masukkan nominal anda!" onkeyup="hitungKursRupiah()">
+    <p>Nilai dollar $ <span id="dollar">0</span></p>
+
+    <h3>Menghitung Kurs rupiah</h3>
+    <input type="number" id="dollarNumber" placeholder="masukkan nominal anda!" onkeyup="hitungKursDollar()">
+    <p>Nilai dollar Rp <span id="rupiahNumber">0</span></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
